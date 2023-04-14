@@ -1,16 +1,16 @@
-package ConcreteIterator;
+package Iterator;
 
-import Inter.Iterator;
+import Aggregate.StudentList;
 import Model.Student;
 
 import java.util.List;
 
 public class ListStudentIterator implements Iterator<Student> {
-    private List<Student> students;
+    private StudentList students;
 
     private int position = 0;
 
-    public ListStudentIterator(List<Student> students) {
+    public ListStudentIterator(StudentList students) {
         this.students = students;
     }
 

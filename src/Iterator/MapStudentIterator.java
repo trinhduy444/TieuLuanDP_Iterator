@@ -1,28 +1,29 @@
-package ConcreteIterator;
+package Iterator;
 
-import Inter.Iterator;
+import Aggregate.StudentMap;
 import Model.Student;
 
 import java.util.Map;
 
 public class MapStudentIterator implements Iterator<Student> {
-    private Map<Integer, Student> students;
+    private StudentMap studentMap;
 
     private int position = 0;
 
-    public MapStudentIterator(Map<Integer, Student>  students) {
-        this.students = students;
+    public MapStudentIterator(StudentMap  students) {
+        this.studentMap = students;
     }
+
 
     @Override
     public boolean hasNext() {
-        return position < students.size();
+        return position < studentMap.size();
     }
 
     @Override
     public Student next() {
         if (hasNext()) {
-            return students.get(position++);
+            return studentMap.get(position++);
         }
         return null;
     }

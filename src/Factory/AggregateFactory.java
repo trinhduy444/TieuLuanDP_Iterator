@@ -1,13 +1,11 @@
 package Factory;
 
-import Enum.TypeList;
-import Inter.Aggregate;
-import Inter.Iterator;
+import Aggregate.Aggregate;
 import Model.Student;
-import ConcreteAggregate.*;
+import Enum.*;
+import Aggregate.*;
 public class AggregateFactory {
-
-    public static Iterator<Student> createAggregate(TypeList typeList){
+    public static Aggregate<Student> createAggregate(TypeList typeList){
         if(typeList == TypeList.MAP) {
             return new StudentMap();
         }

@@ -1,4 +1,4 @@
-package Inter;
+package Iterator;
 
 public interface Iterator<T> {
     boolean hasNext();
